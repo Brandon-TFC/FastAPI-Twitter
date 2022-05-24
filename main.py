@@ -192,7 +192,22 @@ def update_a_user():
 
 )
 def home():
-    return {"Twiter API": "Working!"}
+    """
+    This path operation shows all tweets in the app
+
+    parameters:
+        -
+
+    Returns a json list with all tweets in the app, with the following keys
+        tweet_id: UUID 
+        content: str
+        created_at: datetime 
+        updated_at: Optional[datetime]
+        by: User
+    """
+    with open("tweets.json", "r",encoding="utf-8") as f:
+        results = json.loads(f.read())
+        return results
 
 ##Post a tweets
 @app.post(
@@ -228,7 +243,7 @@ def post(tweet: Tweet = Body(...)):
         tweet_dict["updated_at"] = str(tweet_dict["updated_at"])
         tweet_dict["by"]["user_id"] = str(tweet_dict["by"]["user_id"]) #accedemos al by mediante las llaves y despues a su respectiva llave que deseemos convertir el uudi
         tweet_dict["by"]["birth_date"] = str(tweet_dict["by"]["birth_date"])#accedemos al by mediante las llaves y despues a su respectiva llave que deseemos convertir el uudi
-        
+
         results.append(tweet_dict)
         f.seek(0)
         f.write(json.dumps(results))
