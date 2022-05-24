@@ -1,1 +1,28 @@
-[]
+[
+    {
+        "tweet_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "content": "string",
+        "create_at": "2022-05-23 19:35:11.031293",
+        "updated_at": "2022-05-24 00:35:14.259000+00:00",
+        "by": {
+            "user_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "email": "brand@example.com",
+            "first_name": "brandon",
+            "last_name": "salcedo",
+            "birth_date": "2022-05-24"
+        }
+    },
+    {
+        "tweet_id": "3fa85f64-5717-4562-b3fc-2c963f66afa7",
+        "content": "Hola este es otro tweet",
+        "create_at": "2022-05-23 19:35:11.031293",
+        "updated_at": "2022-05-24 00:35:14.259000+00:00",
+        "by": {
+            "user_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "email": "brand@example.com",
+            "first_name": "axel",
+            "last_name": "salcedo",
+            "birth_date": "2022-05-24"
+        }
+    }
+]
